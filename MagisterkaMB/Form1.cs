@@ -16,5 +16,10 @@ namespace MagisterkaMB
         {
             InitializeComponent();
         }
+
+        private void btnPath_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

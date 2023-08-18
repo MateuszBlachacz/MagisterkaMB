@@ -30,9 +30,9 @@ namespace MagisterkaMB
         private void InitializeComponent()
         {
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
-            this.l_path = new System.Windows.Forms.Label();
-            this.tb_path = new System.Windows.Forms.TextBox();
-            this.btn_path = new System.Windows.Forms.Button();
+            this.lPath = new System.Windows.Forms.Label();
+            this.tbPath = new System.Windows.Forms.TextBox();
+            this.btnPath = new System.Windows.Forms.Button();
             this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
             this.tableLayoutPanel1.SuspendLayout();
             this.SuspendLayout();
@@ -42,10 +42,10 @@ namespace MagisterkaMB
             this.tableLayoutPanel1.ColumnCount = 3;
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 30.69544F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 69.30456F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 400F));
-            this.tableLayoutPanel1.Controls.Add(this.l_path, 0, 1);
-            this.tableLayoutPanel1.Controls.Add(this.tb_path, 1, 1);
-            this.tableLayoutPanel1.Controls.Add(this.btn_path, 2, 1);
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 401F));
+            this.tableLayoutPanel1.Controls.Add(this.lPath, 0, 1);
+            this.tableLayoutPanel1.Controls.Add(this.tbPath, 1, 1);
+            this.tableLayoutPanel1.Controls.Add(this.btnPath, 2, 1);
             this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel1.Location = new System.Drawing.Point(0, 0);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
@@ -58,37 +58,37 @@ namespace MagisterkaMB
             this.tableLayoutPanel1.Size = new System.Drawing.Size(800, 450);
             this.tableLayoutPanel1.TabIndex = 0;
             // 
-            // l_path
+            // lPath
             // 
-            this.l_path.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.l_path.AutoSize = true;
-            this.l_path.Location = new System.Drawing.Point(30, 21);
-            this.l_path.Margin = new System.Windows.Forms.Padding(12, 11, 3, 0);
-            this.l_path.Name = "l_path";
-            this.l_path.Size = new System.Drawing.Size(89, 17);
-            this.l_path.TabIndex = 0;
-            this.l_path.Text = "Wybierz Plik:";
-            this.l_path.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lPath.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.lPath.AutoSize = true;
+            this.lPath.Location = new System.Drawing.Point(30, 21);
+            this.lPath.Margin = new System.Windows.Forms.Padding(12, 11, 3, 0);
+            this.lPath.Name = "lPath";
+            this.lPath.Size = new System.Drawing.Size(89, 17);
+            this.lPath.TabIndex = 0;
+            this.lPath.Text = "Wybierz Plik:";
+            this.lPath.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // tb_path
+            // tbPath
             // 
-            this.tb_path.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tb_path.Location = new System.Drawing.Point(125, 18);
-            this.tb_path.Margin = new System.Windows.Forms.Padding(3, 8, 3, 3);
-            this.tb_path.Name = "tb_path";
-            this.tb_path.Size = new System.Drawing.Size(271, 22);
-            this.tb_path.TabIndex = 1;
+            this.tbPath.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tbPath.Location = new System.Drawing.Point(125, 18);
+            this.tbPath.Margin = new System.Windows.Forms.Padding(3, 8, 3, 3);
+            this.tbPath.Name = "tbPath";
+            this.tbPath.Size = new System.Drawing.Size(270, 22);
+            this.tbPath.TabIndex = 1;
             // 
-            // btn_path
+            // btnPath
             // 
-            this.btn_path.Location = new System.Drawing.Point(402, 18);
-            this.btn_path.Margin = new System.Windows.Forms.Padding(3, 8, 3, 3);
-            this.btn_path.Name = "btn_path";
-            this.btn_path.Size = new System.Drawing.Size(31, 23);
-            this.btn_path.TabIndex = 2;
-            this.btn_path.Text = "...";
-            this.btn_path.UseVisualStyleBackColor = true;
-            this.btn_path.Click += new System.EventHandler(this.btn_path_Click);
+            this.btnPath.Location = new System.Drawing.Point(401, 18);
+            this.btnPath.Margin = new System.Windows.Forms.Padding(3, 8, 3, 3);
+            this.btnPath.Name = "btnPath";
+            this.btnPath.Size = new System.Drawing.Size(31, 23);
+            this.btnPath.TabIndex = 2;
+            this.btnPath.Text = "...";
+            this.btnPath.UseVisualStyleBackColor = true;
+            this.btnPath.Click += new System.EventHandler(this.btnPath_Click);
             // 
             // openFileDialog1
             // 
@@ -112,9 +112,9 @@ namespace MagisterkaMB
         #endregion
 
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
-        private System.Windows.Forms.Label l_path;
-        private System.Windows.Forms.TextBox tb_path;
-        private System.Windows.Forms.Button btn_path;
+        private System.Windows.Forms.Label lPath;
+        private System.Windows.Forms.TextBox tbPath;
+        private System.Windows.Forms.Button btnPath;
         private System.Windows.Forms.OpenFileDialog openFileDialog1;
     }
 }
