@@ -33,6 +33,7 @@ namespace MagisterkaMB
             this.l_path = new System.Windows.Forms.Label();
             this.tb_path = new System.Windows.Forms.TextBox();
             this.btn_path = new System.Windows.Forms.Button();
+            this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
             this.tableLayoutPanel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -41,7 +42,7 @@ namespace MagisterkaMB
             this.tableLayoutPanel1.ColumnCount = 3;
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 30.69544F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 69.30456F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 399F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 400F));
             this.tableLayoutPanel1.Controls.Add(this.l_path, 0, 1);
             this.tableLayoutPanel1.Controls.Add(this.tb_path, 1, 1);
             this.tableLayoutPanel1.Controls.Add(this.btn_path, 2, 1);
@@ -61,7 +62,7 @@ namespace MagisterkaMB
             // 
             this.l_path.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.l_path.AutoSize = true;
-            this.l_path.Location = new System.Drawing.Point(31, 21);
+            this.l_path.Location = new System.Drawing.Point(30, 21);
             this.l_path.Margin = new System.Windows.Forms.Padding(12, 11, 3, 0);
             this.l_path.Name = "l_path";
             this.l_path.Size = new System.Drawing.Size(89, 17);
@@ -72,7 +73,7 @@ namespace MagisterkaMB
             // tb_path
             // 
             this.tb_path.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tb_path.Location = new System.Drawing.Point(126, 18);
+            this.tb_path.Location = new System.Drawing.Point(125, 18);
             this.tb_path.Margin = new System.Windows.Forms.Padding(3, 8, 3, 3);
             this.tb_path.Name = "tb_path";
             this.tb_path.Size = new System.Drawing.Size(271, 22);
@@ -80,7 +81,7 @@ namespace MagisterkaMB
             // 
             // btn_path
             // 
-            this.btn_path.Location = new System.Drawing.Point(403, 18);
+            this.btn_path.Location = new System.Drawing.Point(402, 18);
             this.btn_path.Margin = new System.Windows.Forms.Padding(3, 8, 3, 3);
             this.btn_path.Name = "btn_path";
             this.btn_path.Size = new System.Drawing.Size(31, 23);
@@ -88,6 +89,11 @@ namespace MagisterkaMB
             this.btn_path.Text = "...";
             this.btn_path.UseVisualStyleBackColor = true;
             this.btn_path.Click += new System.EventHandler(this.btn_path_Click);
+            // 
+            // openFileDialog1
+            // 
+            this.openFileDialog1.FileName = "openFileDialog1";
+            this.openFileDialog1.Filter = "Gothic Files (*.d)|*.d";
             // 
             // Form1
             // 
@@ -109,6 +115,7 @@ namespace MagisterkaMB
         private System.Windows.Forms.Label l_path;
         private System.Windows.Forms.TextBox tb_path;
         private System.Windows.Forms.Button btn_path;
+        private System.Windows.Forms.OpenFileDialog openFileDialog1;
     }
 }
 
