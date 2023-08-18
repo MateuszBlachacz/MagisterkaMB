@@ -59,11 +59,12 @@ namespace MagisterkaMB
             // 
             // l_path
             // 
+            this.l_path.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.l_path.AutoSize = true;
-            this.l_path.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.l_path.Location = new System.Drawing.Point(3, 10);
+            this.l_path.Location = new System.Drawing.Point(31, 21);
+            this.l_path.Margin = new System.Windows.Forms.Padding(12, 11, 3, 0);
             this.l_path.Name = "l_path";
-            this.l_path.Size = new System.Drawing.Size(117, 34);
+            this.l_path.Size = new System.Drawing.Size(89, 17);
             this.l_path.TabIndex = 0;
             this.l_path.Text = "Wybierz Plik:";
             this.l_path.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -86,6 +87,7 @@ namespace MagisterkaMB
             this.btn_path.TabIndex = 2;
             this.btn_path.Text = "...";
             this.btn_path.UseVisualStyleBackColor = true;
+            this.btn_path.Click += new System.EventHandler(this.btn_path_Click);
             // 
             // Form1
             // 
