@@ -42,7 +42,7 @@ namespace MagisterkaMB
             this.tableLayoutPanel1.ColumnCount = 3;
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 30.69544F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 69.30456F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 401F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 402F));
             this.tableLayoutPanel1.Controls.Add(this.lPath, 0, 1);
             this.tableLayoutPanel1.Controls.Add(this.tbPath, 1, 1);
             this.tableLayoutPanel1.Controls.Add(this.btnPath, 2, 1);
@@ -76,12 +76,12 @@ namespace MagisterkaMB
             this.tbPath.Location = new System.Drawing.Point(125, 18);
             this.tbPath.Margin = new System.Windows.Forms.Padding(3, 8, 3, 3);
             this.tbPath.Name = "tbPath";
-            this.tbPath.Size = new System.Drawing.Size(270, 22);
+            this.tbPath.Size = new System.Drawing.Size(269, 22);
             this.tbPath.TabIndex = 1;
             // 
             // btnPath
             // 
-            this.btnPath.Location = new System.Drawing.Point(401, 18);
+            this.btnPath.Location = new System.Drawing.Point(400, 18);
             this.btnPath.Margin = new System.Windows.Forms.Padding(3, 8, 3, 3);
             this.btnPath.Name = "btnPath";
             this.btnPath.Size = new System.Drawing.Size(31, 23);

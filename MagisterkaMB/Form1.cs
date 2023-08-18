@@ -12,6 +12,7 @@ namespace MagisterkaMB
 {
     public partial class Form1 : Form
     {
+        public string path;
         public Form1()
         {
             InitializeComponent();
@@ -19,7 +20,11 @@ namespace MagisterkaMB
 
         private void btnPath_Click(object sender, EventArgs e)
         {
-
+            if (openFileDialog1.ShowDialog() == DialogResult.OK)
+            {
+                path = openFileDialog1.FileName;
+                tbPath.Text = path;
+            }
         }
     }
 }
