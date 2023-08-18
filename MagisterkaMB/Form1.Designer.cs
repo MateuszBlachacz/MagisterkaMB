@@ -30,9 +30,9 @@ namespace MagisterkaMB
         private void InitializeComponent()
         {
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
-            this.label1 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.button1 = new System.Windows.Forms.Button();
+            this.l_path = new System.Windows.Forms.Label();
+            this.tb_path = new System.Windows.Forms.TextBox();
+            this.btn_path = new System.Windows.Forms.Button();
             this.tableLayoutPanel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -42,9 +42,9 @@ namespace MagisterkaMB
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 30.69544F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 69.30456F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 399F));
-            this.tableLayoutPanel1.Controls.Add(this.label1, 0, 1);
-            this.tableLayoutPanel1.Controls.Add(this.textBox1, 1, 1);
-            this.tableLayoutPanel1.Controls.Add(this.button1, 2, 1);
+            this.tableLayoutPanel1.Controls.Add(this.l_path, 0, 1);
+            this.tableLayoutPanel1.Controls.Add(this.tb_path, 1, 1);
+            this.tableLayoutPanel1.Controls.Add(this.btn_path, 2, 1);
             this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel1.Location = new System.Drawing.Point(0, 0);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
@@ -57,35 +57,35 @@ namespace MagisterkaMB
             this.tableLayoutPanel1.Size = new System.Drawing.Size(800, 450);
             this.tableLayoutPanel1.TabIndex = 0;
             // 
-            // label1
+            // l_path
             // 
-            this.label1.AutoSize = true;
-            this.label1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label1.Location = new System.Drawing.Point(3, 10);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(117, 34);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "Wybierz Plik:";
-            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.l_path.AutoSize = true;
+            this.l_path.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.l_path.Location = new System.Drawing.Point(3, 10);
+            this.l_path.Name = "l_path";
+            this.l_path.Size = new System.Drawing.Size(117, 34);
+            this.l_path.TabIndex = 0;
+            this.l_path.Text = "Wybierz Plik:";
+            this.l_path.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // textBox1
+            // tb_path
             // 
-            this.textBox1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.textBox1.Location = new System.Drawing.Point(126, 18);
-            this.textBox1.Margin = new System.Windows.Forms.Padding(3, 8, 3, 3);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(271, 22);
-            this.textBox1.TabIndex = 1;
+            this.tb_path.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tb_path.Location = new System.Drawing.Point(126, 18);
+            this.tb_path.Margin = new System.Windows.Forms.Padding(3, 8, 3, 3);
+            this.tb_path.Name = "tb_path";
+            this.tb_path.Size = new System.Drawing.Size(271, 22);
+            this.tb_path.TabIndex = 1;
             // 
-            // button1
+            // btn_path
             // 
-            this.button1.Location = new System.Drawing.Point(403, 18);
-            this.button1.Margin = new System.Windows.Forms.Padding(3, 8, 3, 3);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(31, 23);
-            this.button1.TabIndex = 2;
-            this.button1.Text = "...";
-            this.button1.UseVisualStyleBackColor = true;
+            this.btn_path.Location = new System.Drawing.Point(403, 18);
+            this.btn_path.Margin = new System.Windows.Forms.Padding(3, 8, 3, 3);
+            this.btn_path.Name = "btn_path";
+            this.btn_path.Size = new System.Drawing.Size(31, 23);
+            this.btn_path.TabIndex = 2;
+            this.btn_path.Text = "...";
+            this.btn_path.UseVisualStyleBackColor = true;
             // 
             // Form1
             // 
@@ -104,9 +104,9 @@ namespace MagisterkaMB
         #endregion
 
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Label l_path;
+        private System.Windows.Forms.TextBox tb_path;
+        private System.Windows.Forms.Button btn_path;
     }
 }
 
