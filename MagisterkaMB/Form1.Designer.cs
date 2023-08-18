@@ -40,21 +40,29 @@ namespace MagisterkaMB
             // tableLayoutPanel1
             // 
             this.tableLayoutPanel1.ColumnCount = 3;
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 30.69544F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 69.30456F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 402F));
-            this.tableLayoutPanel1.Controls.Add(this.lPath, 0, 1);
-            this.tableLayoutPanel1.Controls.Add(this.tbPath, 1, 1);
-            this.tableLayoutPanel1.Controls.Add(this.btnPath, 2, 1);
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 18.507F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 81.493F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 156F));
+            this.tableLayoutPanel1.Controls.Add(this.lPath, 0, 0);
+            this.tableLayoutPanel1.Controls.Add(this.tbPath, 1, 0);
+            this.tableLayoutPanel1.Controls.Add(this.btnPath, 2, 0);
             this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel1.Location = new System.Drawing.Point(0, 0);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
-            this.tableLayoutPanel1.RowCount = 5;
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 22.82609F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 77.17391F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 52F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 53F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 300F));
+            this.tableLayoutPanel1.RowCount = 13;
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 7.69162F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 7.691231F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 7.691231F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 7.69123F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 7.691784F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 7.691782F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 7.693019F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 7.693019F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 7.693019F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 7.693019F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 7.693019F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 7.693019F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 7.693019F));
             this.tableLayoutPanel1.Size = new System.Drawing.Size(800, 450);
             this.tableLayoutPanel1.TabIndex = 0;
             // 
@@ -62,7 +70,7 @@ namespace MagisterkaMB
             // 
             this.lPath.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.lPath.AutoSize = true;
-            this.lPath.Location = new System.Drawing.Point(30, 21);
+            this.lPath.Location = new System.Drawing.Point(27, 11);
             this.lPath.Margin = new System.Windows.Forms.Padding(12, 11, 3, 0);
             this.lPath.Name = "lPath";
             this.lPath.Size = new System.Drawing.Size(89, 17);
@@ -73,15 +81,15 @@ namespace MagisterkaMB
             // tbPath
             // 
             this.tbPath.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tbPath.Location = new System.Drawing.Point(125, 18);
+            this.tbPath.Location = new System.Drawing.Point(122, 8);
             this.tbPath.Margin = new System.Windows.Forms.Padding(3, 8, 3, 3);
             this.tbPath.Name = "tbPath";
-            this.tbPath.Size = new System.Drawing.Size(269, 22);
+            this.tbPath.Size = new System.Drawing.Size(518, 22);
             this.tbPath.TabIndex = 1;
             // 
             // btnPath
             // 
-            this.btnPath.Location = new System.Drawing.Point(400, 18);
+            this.btnPath.Location = new System.Drawing.Point(646, 8);
             this.btnPath.Margin = new System.Windows.Forms.Padding(3, 8, 3, 3);
             this.btnPath.Name = "btnPath";
             this.btnPath.Size = new System.Drawing.Size(31, 23);
@@ -94,6 +102,7 @@ namespace MagisterkaMB
             // 
             this.openFileDialog1.FileName = "openFileDialog1";
             this.openFileDialog1.Filter = "Gothic Files (*.d)|*.d";
+            this.openFileDialog1.InitialDirectory = "D:\\Gry\\GOG Galaxy\\Games\\Gothic 2 Gold\\_Work\\Data\\Scripts\\Content";
             // 
             // Form1
             // 
