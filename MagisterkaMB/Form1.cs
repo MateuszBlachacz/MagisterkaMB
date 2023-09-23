@@ -16,6 +16,7 @@ namespace MagisterkaMB
     {
         public string path;
         public bool testmode = false;
+        public Dictionary<string, int> constVariable = new Dictionary<string, int> { }; 
         public Form1()
         {
             InitializeComponent();
@@ -33,13 +34,26 @@ namespace MagisterkaMB
 
         private void makeThing(string line)
         {
+            Match match = Match.Empty;
             string patternSkipComment = "^//";
+            string patternConst = "^const";
+            string patternConstCutVarVal = @"(?<VAR>[A-Z,_,a-z]+)(?<other>\s*?)=(?<other>\s*?)(?<VAL>\d+)";
+
 
             //TestBox.Text += line + "\n";
 
             if (!Regex.IsMatch(line, patternSkipComment))
             {
-              TestBox.Text += line + "\n";
+                if (Regex.IsMatch(line, patternConst)) {
+
+                    match = Regex.Match(line, patternConstCutVarVal);
+
+                    constVariable[match.Groups["VAR"].Value] = int.Parse(match.Groups["VAL"].Value);
+                    TestBox.Text += line + "\n";
+                    TestBox.Text += "Variable: " + match.Groups["VAR"] + " VALUE:" + match.Groups["VAL"] + "\n";
+                    TestBox.Text += "\n";
+                }
+              
             }
             
         }
