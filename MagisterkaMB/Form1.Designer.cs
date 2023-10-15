@@ -44,7 +44,7 @@ namespace MagisterkaMB
             this.tableLayoutPanel1.ColumnCount = 3;
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 18.507F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 81.493F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 161F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 162F));
             this.tableLayoutPanel1.Controls.Add(this.lPath, 0, 0);
             this.tableLayoutPanel1.Controls.Add(this.tbPath, 1, 0);
             this.tableLayoutPanel1.Controls.Add(this.btnPath, 2, 0);
@@ -78,12 +78,12 @@ namespace MagisterkaMB
             this.tbPath.Location = new System.Drawing.Point(121, 7);
             this.tbPath.Margin = new System.Windows.Forms.Padding(3, 7, 3, 2);
             this.tbPath.Name = "tbPath";
-            this.tbPath.Size = new System.Drawing.Size(514, 22);
+            this.tbPath.Size = new System.Drawing.Size(513, 22);
             this.tbPath.TabIndex = 1;
             // 
             // btnPath
             // 
-            this.btnPath.Location = new System.Drawing.Point(641, 7);
+            this.btnPath.Location = new System.Drawing.Point(640, 7);
             this.btnPath.Margin = new System.Windows.Forms.Padding(3, 7, 3, 2);
             this.btnPath.Name = "btnPath";
             this.btnPath.Size = new System.Drawing.Size(31, 23);
@@ -97,13 +97,13 @@ namespace MagisterkaMB
             this.TestBox.Location = new System.Drawing.Point(122, 44);
             this.TestBox.Margin = new System.Windows.Forms.Padding(4);
             this.TestBox.Name = "TestBox";
-            this.TestBox.Size = new System.Drawing.Size(512, 223);
+            this.TestBox.Size = new System.Drawing.Size(511, 223);
             this.TestBox.TabIndex = 3;
             this.TestBox.Text = "";
             // 
             // TestButton
             // 
-            this.TestButton.Location = new System.Drawing.Point(642, 44);
+            this.TestButton.Location = new System.Drawing.Point(641, 44);
             this.TestButton.Margin = new System.Windows.Forms.Padding(4);
             this.TestButton.Name = "TestButton";
             this.TestButton.Size = new System.Drawing.Size(100, 28);

@@ -27,11 +27,11 @@ namespace MagisterkaMB
     public abstract class Item
     {
         public string codeName { get; set; }
-        protected string name;
-        protected Mainflag mainflag;
-        protected int flags = 0;
-        protected string descriptionText;
-        protected Material material;
+        public string name { get; set; }
+        public Mainflag mainflag { get; set;}
+        protected string flags = "0";
+        public string descriptionText;
+        public Material material;
 
         public abstract override string ToString();
 

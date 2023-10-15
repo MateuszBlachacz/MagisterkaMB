@@ -16,19 +16,19 @@ namespace MagisterkaMB
     }
     public class IT_Armor : Item
     {
-        public int prot_val_edge;
-        int prot_val_blunt;
-        int prot_val_point;
-        int prot_val_fire;
-        int prot_val_magic;
+        public int prot_val_edge { get; set; }
+        public int prot_val_blunt {get; set;}
+        public int prot_val_point {get; set;}
+        public int prot_val_fire {get; set;}
+        public int prot_val_magic {get; set;}
 
         Wear wear = Wear.WEAR_TORSO;
-        string constValue;
+        public string constValue {get; set;}
         int value;
 
-        string visual;
-        string visual_change;
-        int visual_skin = 0;
+        public string visual { get; set; }
+        public string visual_change { get; set; }
+        public int visual_skin = 0;
 
         public IT_Armor()
         {
@@ -43,7 +43,7 @@ namespace MagisterkaMB
             prot_val_magic = 10;
 
             constValue = "VALUE_" + codeName;
-            value = GetValue(constValue);
+            value = 20;
 
             visual = GetVisual();
             visual_change = GetVisualChange();
@@ -69,7 +69,7 @@ namespace MagisterkaMB
             this.prot_val_magic = prot_val_magic;
 
             this.constValue = constValue;
-            this.value = GetValue(constValue);
+            this.value = 20;
 
             this.visual = visual;
             this.visual_change = visual_change;
@@ -85,9 +85,15 @@ namespace MagisterkaMB
         {
             return "Armor_Judge.asc";
         }
-        public int GetValue(string constValue)
+
+        public void SetValue(int value)
         {
-            return 20;
+            this.value = value;
+        }
+
+        public int GetValue()
+        {
+            return value;
         }
 
         public override string ToString()

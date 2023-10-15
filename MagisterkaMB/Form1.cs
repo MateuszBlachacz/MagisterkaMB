@@ -23,6 +23,21 @@ namespace MagisterkaMB
             InitializeComponent();
         }
 
+        void setArmorValue()
+        {
+            foreach(IT_Armor arm in armors)
+            {
+                try
+                {
+                    arm.SetValue(constVariable[arm.constValue]);
+                }
+                catch (Exception e)
+                {
+                    arm.SetValue(0);
+                }
+                
+            }
+        }
         private void btnPath_Click(object sender, EventArgs e)
         {
             if (openFileDialog1.ShowDialog() == DialogResult.OK)
@@ -47,7 +62,7 @@ namespace MagisterkaMB
 (\r\n)*\s*protection\s*\[PROT_MAGIC\]\s*=\s*(?<magic>\d+)\s*;
 (\r\n)*\s*value\s*=\s*(?<constValue>.*)\s*;
 (\r\n)*\s*wear\s*=\s*(?<wear>.*)\s*;
-(\r\n)*\s*visual\s*=\s*""*(?<visual>.*)""*\s*;
+(\r\n)*\s*visual\s*=\s*""*(?<visual>.*?)""*\s*;
 (\r\n)*\s*visual_change\s*=\s*""*(?<visual_change>.*?)""*\s*;
 \r\n\s*visual_skin\s*=\s*(?<visual_skin>\d*)\s*;
 (\r\n)*\s*material\s*=\s*(?<material>.*)\s*;";
@@ -113,7 +128,7 @@ namespace MagisterkaMB
             try
             {
                 
-                StreamReader sr = new StreamReader(fileName);
+                StreamReader sr = new StreamReader(fileName, Encoding.Default);
                 string line;
                 line = "";
 
@@ -145,9 +160,11 @@ namespace MagisterkaMB
             finally
             {
                 Console.WriteLine("Executing finally block.");
+
                 if (fileName.Contains("Armor"))
                 {
-                    changeForm("Armor", new Dictionary<string, object>() { { "ConstVariable", constVariable }, { "Armors", armors } });
+                   setArmorValue();
+                   changeForm("Armor", new Dictionary<string, object>() { { "ConstVariable", constVariable }, { "Armors", armors } });
                 }
             }
         }
@@ -183,14 +200,26 @@ namespace MagisterkaMB
             //TestBox.Text = arm.ToString();
             TestBox.Text = "";
             //TestBox.Text = arm.GetType().GetMethod("codeName").ToString();
-            TestBox.Text = arm.GetType().GetMethod("get_codeName").Invoke(arm,null).ToString();
-            KeyValuePair<string, int> x = new KeyValuePair<string, int>("ala",1);
-            TestBox.Text += x.GetType().GetMethod("get_Key").Invoke(x, null).ToString();
-            /*
+            //TestBox.Text = arm.GetType().GetMethod("get_codeName").Invoke(arm,null).ToString();
+            //KeyValuePair<string, int> x = new KeyValuePair<string, int>("ala",1);
+            //TestBox.Text += x.GetType().GetMethod("get_Key").Invoke(x, null).ToString();
+           /* 
             foreach(var item in arm.GetType().GetMethods())
             {
                 TestBox.Text +=  "\n" +item;
-            }*/
+            }
+           */
+
+            foreach (var item in Armor.GetEnumList<Mainflag>())
+            {
+                TestBox.Text += "\n" + item;
+            }
+            //TestBox.Text += Armor.GetEnumList<Mainflag>().ToString();
+            
+            foreach(var armor in armors)
+            {
+                TestBox.Text += "\n" + armor.visual;
+            }
         }
     }
 
