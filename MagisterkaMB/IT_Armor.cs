@@ -32,9 +32,32 @@ namespace MagisterkaMB
 
         public IT_Armor()
         {
-            codeName = "ITAR_MY";
+            this.codeName = "ITAR_MINE";
             name = "Moja szata";
             mainflag = Mainflag.ITEM_KAT_ARMOR;
+            flags = "0";
+
+            prot_val_edge = 10;
+            prot_val_blunt = 10;
+            prot_val_point = 10;
+            prot_val_fire = 10;
+            prot_val_magic = 10;
+
+            constValue = "VALUE_" + codeName;
+            value = 20;
+
+            visual = GetVisual();
+            visual_change = GetVisualChange();
+            material = Material.MAT_LEATHER;
+
+        }
+
+        public IT_Armor(string codeName)
+        {
+            this.codeName = codeName;
+            name = "Moja szata";
+            mainflag = Mainflag.ITEM_KAT_ARMOR;
+            flags = "0";
 
             prot_val_edge = 10;
             prot_val_blunt = 10;
@@ -62,7 +85,6 @@ namespace MagisterkaMB
             this.name = name;
             this.mainflag = mainflag;
             this.flags = "0";
-
             this.prot_val_edge = prot_val_edge;
             this.prot_val_blunt = prot_val_blunt;
             this.prot_val_point = prot_val_point;
@@ -124,7 +146,7 @@ namespace MagisterkaMB
             text += $"    visual_skin = {visual_skin};\r\n";
             text += $"    material = {material};\r\n\n";
 
-            text += $"    description = name\r\n\n";
+            text += $"    description = name;\r\n\n";
 
             text += $"    TEXT[1] = NAME_Prot_Edge;\r\n";
             text += $"    COUNT[1] = protection[PROT_EDGE];\r\n\n";

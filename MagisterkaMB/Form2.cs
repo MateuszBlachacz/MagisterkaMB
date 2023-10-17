@@ -184,7 +184,7 @@ namespace MagisterkaMB
 
                 foreach ( var item in constITdata)
                 {
-                    text += $"const int {item.Key}    =   {item.Value}\n";
+                    text += $"const int {item.Key}    =   {item.Value};\n";
                 }
 
                 text += "// ******************\n// 		Rüstungen\n// ******************\n";
@@ -312,14 +312,26 @@ namespace MagisterkaMB
             if(ITvalue.Text == "")
             {
                 ar.SetValue(0);
-                constITdata[ar.constValue] = 0;
+                //constITdata[ar.constValue] = 0;
             }
             else
             {
                 ar.SetValue(int.Parse(ITvalue.Text));
+                if(constITdata.ContainsKey(ar.constValue))
                 constITdata[ar.constValue] = int.Parse(ITvalue.Text);
             }
         }
 
+        private void ITAddArmorButton_Click(object sender, EventArgs e)
+        {
+            string codeName= "ITAR_" + ITcodeName.Text;
+            IT_Armor ar = new IT_Armor(codeName);
+            ar.codeName = codeName;
+
+            armors.Add(ar);
+            ITArmorBox.Items.Add(codeName);
+            constITdata[ar.constValue] = ar.GetValue();
+
+        }
     }
 }

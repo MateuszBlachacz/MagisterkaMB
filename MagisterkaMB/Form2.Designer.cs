@@ -62,7 +62,7 @@ namespace MagisterkaMB
             this.ITsaveButton = new System.Windows.Forms.Button();
             this.ITCancelButton = new System.Windows.Forms.Button();
             this.ITAddArmorButton = new System.Windows.Forms.Button();
-            this.ITcodeNameButton = new System.Windows.Forms.TextBox();
+            this.ITcodeName = new System.Windows.Forms.TextBox();
             this.ITdeleteButton = new System.Windows.Forms.Button();
             this.ITNewArmorLabel = new System.Windows.Forms.Label();
             this.SuspendLayout();
@@ -370,14 +370,15 @@ namespace MagisterkaMB
             this.ITAddArmorButton.TabIndex = 33;
             this.ITAddArmorButton.Text = "Dodaj";
             this.ITAddArmorButton.UseVisualStyleBackColor = true;
+            this.ITAddArmorButton.Click += new System.EventHandler(this.ITAddArmorButton_Click);
             // 
-            // ITcodeNameButton
+            // ITcodeName
             // 
-            this.ITcodeNameButton.Location = new System.Drawing.Point(506, 100);
-            this.ITcodeNameButton.Margin = new System.Windows.Forms.Padding(2);
-            this.ITcodeNameButton.Name = "ITcodeNameButton";
-            this.ITcodeNameButton.Size = new System.Drawing.Size(70, 20);
-            this.ITcodeNameButton.TabIndex = 34;
+            this.ITcodeName.Location = new System.Drawing.Point(506, 100);
+            this.ITcodeName.Margin = new System.Windows.Forms.Padding(2);
+            this.ITcodeName.Name = "ITcodeName";
+            this.ITcodeName.Size = new System.Drawing.Size(70, 20);
+            this.ITcodeName.TabIndex = 34;
             // 
             // ITdeleteButton
             // 
@@ -405,7 +406,7 @@ namespace MagisterkaMB
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.ITNewArmorLabel);
             this.Controls.Add(this.ITdeleteButton);
-            this.Controls.Add(this.ITcodeNameButton);
+            this.Controls.Add(this.ITcodeName);
             this.Controls.Add(this.ITAddArmorButton);
             this.Controls.Add(this.ITCancelButton);
             this.Controls.Add(this.ITsaveButton);
@@ -481,7 +482,7 @@ namespace MagisterkaMB
         private System.Windows.Forms.Button ITsaveButton;
         private System.Windows.Forms.Button ITCancelButton;
         private System.Windows.Forms.Button ITAddArmorButton;
-        private System.Windows.Forms.TextBox ITcodeNameButton;
+        private System.Windows.Forms.TextBox ITcodeName;
         private System.Windows.Forms.Button ITdeleteButton;
         private System.Windows.Forms.Label ITNewArmorLabel;
     }
