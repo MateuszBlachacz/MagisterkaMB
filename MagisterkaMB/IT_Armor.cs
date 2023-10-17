@@ -101,45 +101,45 @@ namespace MagisterkaMB
         {
             string text = "";
 
-            text += $"INSTANCE {codeName} (C_Item)\n";
-            text += "{\n";
+            text += $"INSTANCE {codeName} (C_Item)\r\n";
+            text += "{\r\n";
 
-            text += $"    name = \"{name}\";\n\n";
+            text += $"    name = \"{name}\";\r\n\n";
 
-            text += $"    mainflag = {mainflag};\n";
-            text += $"    flags = {flags};\n\n";
+            text += $"    mainflag = {mainflag};\r\n";
+            text += $"    flags = {flags};\r\n\n";
 
-            text += $"    protection [PROT_EDGE] = {prot_val_edge};\n";
-            text += $"    protection [PROT_BLUNT] = {prot_val_blunt};\n";
-            text += $"    protection [PROT_POINT] = {prot_val_point};\n";
-            text += $"    protection [PROT_FIRE] = {prot_val_fire};\n";
-            text += $"    protection [PROT_MAGIC] = {prot_val_magic};\n\n";
+            text += $"    protection [PROT_EDGE] = {prot_val_edge};\r\n";
+            text += $"    protection [PROT_BLUNT] = {prot_val_blunt};\r\n";
+            text += $"    protection [PROT_POINT] = {prot_val_point};\r\n";
+            text += $"    protection [PROT_FIRE] = {prot_val_fire};\r\n";
+            text += $"    protection [PROT_MAGIC] = {prot_val_magic};\r\n\n";
 
-            text += $"    value = {constValue};\n\n";
+            text += $"    value = {constValue};\r\n\n";
 
-            text += $"    wear = {wear};\n\n";
+            text += $"    wear = {wear};\r\n\n";
 
-            text += $"    visual = \"{visual}\";\n";
-            text += $"    visual_change = \"{visual_change}\";\n";
-            text += $"    visual_skin = {visual_skin};\n";
-            text += $"    material = {material};\n\n";
+            text += $"    visual = \"{visual}\";\r\n";
+            text += $"    visual_change = \"{visual_change}\";\r\n";
+            text += $"    visual_skin = {visual_skin};\r\n";
+            text += $"    material = {material};\r\n\n";
 
-            text += $"    description = name\n\n";
+            text += $"    description = name\r\n\n";
 
-            text += $"    TEXT[1] = NAME_Prot_Edge;\n";
-            text += $"    COUNT[1] = protection[PROT_EDGE];\n\n";
+            text += $"    TEXT[1] = NAME_Prot_Edge;\r\n";
+            text += $"    COUNT[1] = protection[PROT_EDGE];\r\n\n";
 
-            text += $"    TEXT[2] = NAME_Prot_Point;\n";
-            text += $"    COUNT[2] = protection[PROT_POINT];\n\n";
+            text += $"    TEXT[2] = NAME_Prot_Point;\r\n";
+            text += $"    COUNT[2] = protection[PROT_POINT];\r\n\n";
 
-            text += $"    TEXT[3] = NAME_Prot_Fire;\n";
-            text += $"    COUNT[3] = protection[PROT_FIRE];\n\n";
+            text += $"    TEXT[3] = NAME_Prot_Fire;\r\n";
+            text += $"    COUNT[3] = protection[PROT_FIRE];\r\n\n";
 
-            text += $"    TEXT[4] = NAME_Prot_Magic;\n";
-            text += $"    COUNT[4] = protection[PROT_MAGIC];\n\n";
+            text += $"    TEXT[4] = NAME_Prot_Magic;\r\n";
+            text += $"    COUNT[4] = protection[PROT_MAGIC];\r\n\n";
 
-            text += $"    TEXT[5] = NAME_Value;\n";
-            text += $"    COUNT[5] = value;\n";
+            text += $"    TEXT[5] = NAME_Value;\r\n";
+            text += $"    COUNT[5] = value;\r\n";
 
             text += "};\n";
             text += "// ******************************************************\n";
