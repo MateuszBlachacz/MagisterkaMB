@@ -16,8 +16,6 @@ namespace MagisterkaMB
 
         Dictionary<string, int> constITdata = new Dictionary<string, int> { };
         List<IT_Armor> armors = new List<IT_Armor>();
-        string filepath3ds = @"D:\Gry\GOG Galaxy\Games\Gothic 2 Gold\_Work\Data\Meshes\Items\Armor";
-        string filepathasc = @"D:\Gry\GOG Galaxy\Games\Gothic 2 Gold\_Work\Data\Meshes\Items\Armor";
         string path;
         public Armor()
         {
@@ -332,6 +330,17 @@ namespace MagisterkaMB
             ITArmorBox.Items.Add(codeName);
             constITdata[ar.constValue] = ar.GetValue();
 
+        }
+
+        private void ITdeleteButton_Click(object sender, EventArgs e)
+        {        
+            IT_Armor ar = getCurrentArmor();
+            if (ar != null)
+            {
+                constITdata.Remove(ar.constValue);
+                ITArmorBox.Items.Remove(ar.codeName);
+                armors.Remove(ar);
+            }
         }
     }
 }

@@ -88,7 +88,7 @@ namespace MagisterkaMB
             // ITvalueConst
             // 
             this.ITvalueConst.Location = new System.Drawing.Point(520, 32);
-            this.ITvalueConst.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.ITvalueConst.Margin = new System.Windows.Forms.Padding(2);
             this.ITvalueConst.Name = "ITvalueConst";
             this.ITvalueConst.Size = new System.Drawing.Size(124, 20);
             this.ITvalueConst.TabIndex = 2;
@@ -134,7 +134,7 @@ namespace MagisterkaMB
             // 
             this.ITname.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.ITname.Location = new System.Drawing.Point(86, 147);
-            this.ITname.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.ITname.Margin = new System.Windows.Forms.Padding(2);
             this.ITname.Name = "ITname";
             this.ITname.Size = new System.Drawing.Size(138, 19);
             this.ITname.TabIndex = 7;
@@ -198,7 +198,7 @@ namespace MagisterkaMB
             // ITsword
             // 
             this.ITsword.Location = new System.Drawing.Point(113, 245);
-            this.ITsword.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.ITsword.Margin = new System.Windows.Forms.Padding(2);
             this.ITsword.Name = "ITsword";
             this.ITsword.Size = new System.Drawing.Size(57, 20);
             this.ITsword.TabIndex = 14;
@@ -207,7 +207,7 @@ namespace MagisterkaMB
             // ITpoint
             // 
             this.ITpoint.Location = new System.Drawing.Point(113, 269);
-            this.ITpoint.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.ITpoint.Margin = new System.Windows.Forms.Padding(2);
             this.ITpoint.Name = "ITpoint";
             this.ITpoint.Size = new System.Drawing.Size(57, 20);
             this.ITpoint.TabIndex = 16;
@@ -225,7 +225,7 @@ namespace MagisterkaMB
             // ITfire
             // 
             this.ITfire.Location = new System.Drawing.Point(113, 296);
-            this.ITfire.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.ITfire.Margin = new System.Windows.Forms.Padding(2);
             this.ITfire.Name = "ITfire";
             this.ITfire.Size = new System.Drawing.Size(57, 20);
             this.ITfire.TabIndex = 18;
@@ -243,7 +243,7 @@ namespace MagisterkaMB
             // ITmagic
             // 
             this.ITmagic.Location = new System.Drawing.Point(113, 321);
-            this.ITmagic.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.ITmagic.Margin = new System.Windows.Forms.Padding(2);
             this.ITmagic.Name = "ITmagic";
             this.ITmagic.Size = new System.Drawing.Size(57, 20);
             this.ITmagic.TabIndex = 20;
@@ -270,7 +270,7 @@ namespace MagisterkaMB
             // ITvalue
             // 
             this.ITvalue.Location = new System.Drawing.Point(310, 151);
-            this.ITvalue.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.ITvalue.Margin = new System.Windows.Forms.Padding(2);
             this.ITvalue.Name = "ITvalue";
             this.ITvalue.Size = new System.Drawing.Size(70, 20);
             this.ITvalue.TabIndex = 22;
@@ -342,7 +342,7 @@ namespace MagisterkaMB
             // ITsaveButton
             // 
             this.ITsaveButton.Location = new System.Drawing.Point(588, 396);
-            this.ITsaveButton.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.ITsaveButton.Margin = new System.Windows.Forms.Padding(2);
             this.ITsaveButton.Name = "ITsaveButton";
             this.ITsaveButton.Size = new System.Drawing.Size(64, 27);
             this.ITsaveButton.TabIndex = 31;
@@ -353,7 +353,7 @@ namespace MagisterkaMB
             // ITCancelButton
             // 
             this.ITCancelButton.Location = new System.Drawing.Point(682, 396);
-            this.ITCancelButton.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.ITCancelButton.Margin = new System.Windows.Forms.Padding(2);
             this.ITCancelButton.Name = "ITCancelButton";
             this.ITCancelButton.Size = new System.Drawing.Size(64, 27);
             this.ITCancelButton.TabIndex = 32;
@@ -389,6 +389,7 @@ namespace MagisterkaMB
             this.ITdeleteButton.TabIndex = 35;
             this.ITdeleteButton.Text = "Usuń";
             this.ITdeleteButton.UseVisualStyleBackColor = true;
+            this.ITdeleteButton.Click += new System.EventHandler(this.ITdeleteButton_Click);
             // 
             // ITNewArmorLabel
             // 
