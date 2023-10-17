@@ -176,7 +176,7 @@ namespace MagisterkaMB
         private void ITsaveButton_Click(object sender, EventArgs e)
         {
 
-            using (StreamWriter writetext = new StreamWriter(path))
+            using (StreamWriter writetext = new StreamWriter(path, false, Encoding.GetEncoding(1252)))
             {
                 string text = "";
 
