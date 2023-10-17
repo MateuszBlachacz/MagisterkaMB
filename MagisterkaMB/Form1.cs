@@ -97,6 +97,7 @@ namespace MagisterkaMB
             }
             TestBox.Text = i.ToString();
         }
+
         private void loadConstVariable(string line)
         {
             Match match = Match.Empty;
@@ -125,48 +126,78 @@ namespace MagisterkaMB
         }
         private void readFile(string fileName)
         {
-            try
+            if (fileName.Contains("Armor") || fileName.Contains("armor"))
             {
-                
-                StreamReader sr = new StreamReader(fileName, Encoding.Default);
-                string line;
-                line = "";
-
-
-                if (fileName.Contains("Armor"))
+                using (StreamReader sr = new StreamReader(fileName, Encoding.Default))
                 {
                     string FileText = sr.ReadToEnd();
                     loadArmor(FileText);
-                    sr.DiscardBufferedData();
-                    sr.BaseStream.Seek(0, SeekOrigin.Begin);
-                }
+                    // sr.DiscardBufferedData();
+                    // sr.BaseStream.Seek(0, SeekOrigin.Begin);
 
-                while (line != null)
+                }
+            }
+
+            using (StreamReader sr = new StreamReader(fileName, Encoding.Default))
+            {
+                string line;
+                line = "";
+                do
                 {
+                    loadConstVariable(line);
                     line = sr.ReadLine();
+                } while (line != null);
 
-                    loadConstVariable(line);   
-                }
-
-               
-                sr.Close();
-                
-                
             }
-            catch (Exception e)
-            {
-                Console.WriteLine("Exception: " + e.Message);
-            }
-            finally
-            {
-                Console.WriteLine("Executing finally block.");
 
-                if (fileName.Contains("Armor"))
+            if (fileName.Contains("Armor") || fileName.Contains("armor"))
+            {
+                setArmorValue();
+                changeForm("Armor", new Dictionary<string, object>() { { "ConstVariable", constVariable }, { "Armors", armors }, { "Path", path } });
+            }
+
+            /*
+            try
                 {
-                   setArmorValue();
-                   changeForm("Armor", new Dictionary<string, object>() { { "ConstVariable", constVariable }, { "Armors", armors } });
+
+                    StreamReader sr = new StreamReader(fileName, Encoding.Default);
+                    string line;
+                    line = "";
+
+
+                    if (fileName.Contains("Armor"))
+                    {
+                        string FileText = sr.ReadToEnd();
+                        loadArmor(FileText);
+                        sr.DiscardBufferedData();
+                        sr.BaseStream.Seek(0, SeekOrigin.Begin);
+                    }
+
+                    while (line != null)
+                    {
+                        line = sr.ReadLine();
+
+                        loadConstVariable(line);
+                    }
+
+
+                    sr.Close();
+
+
                 }
-            }
+                catch (Exception e)
+                {
+                    Console.WriteLine("Exception: " + e.Message);
+                }
+                finally
+                {
+                    if (fileName.Contains("Armor") || fileName.Contains("armor"))
+                    {
+                        setArmorValue();
+                        changeForm("Armor", new Dictionary<string, object>() { { "ConstVariable", constVariable }, { "Armors", armors }, { "Path", path } });
+                    }
+                }
+            */
         }
 
 
@@ -212,13 +243,13 @@ namespace MagisterkaMB
 
             foreach (var item in Armor.GetEnumList<Mainflag>())
             {
-                TestBox.Text += "\n" + item;
+               // TestBox.Text += "\n" + item;
             }
             //TestBox.Text += Armor.GetEnumList<Mainflag>().ToString();
             
             foreach(var armor in armors)
             {
-                TestBox.Text += "\n" + armor.visual;
+                TestBox.Text += "\n" + armor.codeName;
             }
         }
     }

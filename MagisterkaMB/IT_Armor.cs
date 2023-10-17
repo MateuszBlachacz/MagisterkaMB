@@ -61,6 +61,7 @@ namespace MagisterkaMB
             this.codeName = codeName;
             this.name = name;
             this.mainflag = mainflag;
+            this.flags = "0";
 
             this.prot_val_edge = prot_val_edge;
             this.prot_val_blunt = prot_val_blunt;

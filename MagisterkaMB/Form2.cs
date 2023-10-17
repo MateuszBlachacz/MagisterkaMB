@@ -18,6 +18,7 @@ namespace MagisterkaMB
         List<IT_Armor> armors = new List<IT_Armor>();
         string filepath3ds = @"D:\Gry\GOG Galaxy\Games\Gothic 2 Gold\_Work\Data\Meshes\Items\Armor";
         string filepathasc = @"D:\Gry\GOG Galaxy\Games\Gothic 2 Gold\_Work\Data\Meshes\Items\Armor";
+        string path;
         public Armor()
         {
             InitializeComponent();
@@ -51,7 +52,7 @@ namespace MagisterkaMB
             comboBoxAddItems(ITmainflagBox, GetEnumList<Mainflag>());
             comboBoxAddItems(ITmaterialBox, GetEnumList<Material>());
 
-            //takeFilename(filepath3ds, @"*.3ds",ITvisualBox);
+            path = data["Path"] as string;
         }
 
         public static List<TEnum> GetEnumList<TEnum>() where TEnum : Enum
@@ -93,7 +94,7 @@ namespace MagisterkaMB
         private void ITArmorBox_SelectedIndexChanged(object sender, EventArgs e)
         {
             show_propertis();
-            IT_Armor ar = armors.Find(item => item.codeName == ITArmorBox.SelectedItem.ToString());
+            IT_Armor ar = getCurrentArmor();
 
             ITname.Text = ar.name;
             ITmainflagBox.SelectedItem = ar.mainflag;
@@ -175,11 +176,150 @@ namespace MagisterkaMB
         private void ITsaveButton_Click(object sender, EventArgs e)
         {
 
+            using (StreamWriter writetext = new StreamWriter(path))
+            {
+                string text = "";
+
+                text += "// ------ Const value ------\n";
+
+                foreach ( var item in constITdata)
+                {
+                    text += $"const int {item.Key}    =   {item.Value}\n";
+                }
+
+                text += "// ******************\n// 		Rüstungen\n// ******************\n";
+
+                foreach (IT_Armor armor in armors)
+                {
+                    text += armor.ToString();
+                }
+
+                writetext.Write(text);
+                
+            }
+           
         }
 
         private void ITCancelButton_Click(object sender, EventArgs e)
         {
-
+            Form form = Activator.CreateInstance(Type.GetType("MagisterkaMB.Form1")) as Form;
+            form.Show();
+            this.Hide();
         }
+
+         private IT_Armor getCurrentArmor()
+        {
+            return armors.Find(item => item.codeName == ITArmorBox.SelectedItem.ToString());
+        }
+
+        private void ITname_TextChanged(object sender, EventArgs e)
+        {
+            IT_Armor ar = getCurrentArmor();
+            ar.name = ITname.Text;
+        }
+
+        private void ITmainflagBox_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            IT_Armor ar = getCurrentArmor();
+            Mainflag mf;
+            Enum.TryParse<Mainflag>(ITmainflagBox.SelectedItem.ToString(), out mf);
+            ar.mainflag = mf;
+        }
+
+        private void ITflagBox_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            IT_Armor ar = getCurrentArmor();
+            ar.flags = ITflagBox.Text;
+        }
+        //repare all int parse
+        private void ITsword_TextChanged(object sender, EventArgs e)
+        {
+            IT_Armor ar = getCurrentArmor();
+            if (ITsword.Text =="")
+            {
+                ar.prot_val_edge = 0;
+                ar.prot_val_blunt = 0;
+            }
+            else
+            {
+                ar.prot_val_edge = int.Parse(ITsword.Text);
+                ar.prot_val_blunt = int.Parse(ITsword.Text);
+            }
+        }
+        private void ITpoint_TextChanged(object sender, EventArgs e)
+        {
+            IT_Armor ar = getCurrentArmor();
+            if (ITpoint.Text == "")
+            {
+                ar.prot_val_point = 0;
+            }
+            else
+            {
+                ar.prot_val_point = int.Parse(ITpoint.Text);
+            }
+        }
+
+        private void ITfire_TextChanged(object sender, EventArgs e)
+        {
+            IT_Armor ar = getCurrentArmor();
+            if (ITfire.Text == "")
+            {
+                ar.prot_val_fire = 0;
+            }
+            else
+            { 
+                ar.prot_val_fire = int.Parse(ITfire.Text);
+            }
+        }
+
+        private void ITmagic_TextChanged(object sender, EventArgs e)
+        {
+            IT_Armor ar = getCurrentArmor();
+            if(ITmagic.Text == "")
+            {
+                ar.prot_val_magic = 0;
+            }
+            else
+            {
+                ar.prot_val_magic = int.Parse(ITmagic.Text);
+            }
+            
+        }
+
+        private void ITvisualBox_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            IT_Armor ar = getCurrentArmor();
+            ar.visual = ITvisualBox.SelectedItem.ToString();
+        }
+
+        private void ITvisualChangeBox_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            IT_Armor ar = getCurrentArmor();
+            ar.visual_change = ITvisualChangeBox.SelectedItem.ToString();
+        }
+
+        private void ITmaterialBox_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            IT_Armor ar = getCurrentArmor();
+            Material m;
+            Enum.TryParse<Material>(ITmaterialBox.SelectedItem.ToString(), out m);
+            ar.material = m;
+        }
+
+        private void ITvalue_TextChanged(object sender, EventArgs e)
+        {
+            IT_Armor ar = getCurrentArmor();
+            if(ITvalue.Text == "")
+            {
+                ar.SetValue(0);
+                constITdata[ar.constValue] = 0;
+            }
+            else
+            {
+                ar.SetValue(int.Parse(ITvalue.Text));
+                constITdata[ar.constValue] = int.Parse(ITvalue.Text);
+            }
+        }
+
     }
 }

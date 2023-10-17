@@ -139,6 +139,7 @@ namespace MagisterkaMB
             this.ITname.Size = new System.Drawing.Size(182, 22);
             this.ITname.TabIndex = 7;
             this.ITname.Text = "Święta ąęćżź";
+            this.ITname.TextChanged += new System.EventHandler(this.ITname_TextChanged);
             // 
             // ITmainflagLabel
             // 
@@ -158,6 +159,7 @@ namespace MagisterkaMB
             this.ITmainflagBox.Name = "ITmainflagBox";
             this.ITmainflagBox.Size = new System.Drawing.Size(182, 24);
             this.ITmainflagBox.TabIndex = 9;
+            this.ITmainflagBox.SelectedIndexChanged += new System.EventHandler(this.ITmainflagBox_SelectedIndexChanged);
             // 
             // ITflagBox
             // 
@@ -167,6 +169,7 @@ namespace MagisterkaMB
             this.ITflagBox.Name = "ITflagBox";
             this.ITflagBox.Size = new System.Drawing.Size(182, 24);
             this.ITflagBox.TabIndex = 11;
+            this.ITflagBox.SelectedIndexChanged += new System.EventHandler(this.ITflagBox_SelectedIndexChanged);
             // 
             // ITflagsLabel
             // 
@@ -204,6 +207,7 @@ namespace MagisterkaMB
             this.ITsword.Name = "ITsword";
             this.ITsword.Size = new System.Drawing.Size(75, 22);
             this.ITsword.TabIndex = 14;
+            this.ITsword.TextChanged += new System.EventHandler(this.ITsword_TextChanged);
             // 
             // ITpoint
             // 
@@ -211,6 +215,7 @@ namespace MagisterkaMB
             this.ITpoint.Name = "ITpoint";
             this.ITpoint.Size = new System.Drawing.Size(75, 22);
             this.ITpoint.TabIndex = 16;
+            this.ITpoint.TextChanged += new System.EventHandler(this.ITpoint_TextChanged);
             // 
             // ITpointLabel
             // 
@@ -228,6 +233,7 @@ namespace MagisterkaMB
             this.ITfire.Name = "ITfire";
             this.ITfire.Size = new System.Drawing.Size(75, 22);
             this.ITfire.TabIndex = 18;
+            this.ITfire.TextChanged += new System.EventHandler(this.ITfire_TextChanged);
             // 
             // ITfireLabel
             // 
@@ -245,6 +251,7 @@ namespace MagisterkaMB
             this.ITmagic.Name = "ITmagic";
             this.ITmagic.Size = new System.Drawing.Size(75, 22);
             this.ITmagic.TabIndex = 20;
+            this.ITmagic.TextChanged += new System.EventHandler(this.ITmagic_TextChanged);
             // 
             // ITmagicLabel
             // 
@@ -272,6 +279,7 @@ namespace MagisterkaMB
             this.ITvalue.Name = "ITvalue";
             this.ITvalue.Size = new System.Drawing.Size(92, 22);
             this.ITvalue.TabIndex = 22;
+            this.ITvalue.TextChanged += new System.EventHandler(this.ITvalue_TextChanged);
             // 
             // ITvisualChangeLabel
             // 
@@ -311,6 +319,7 @@ namespace MagisterkaMB
             this.ITvisualChangeBox.Name = "ITvisualChangeBox";
             this.ITvisualChangeBox.Size = new System.Drawing.Size(182, 24);
             this.ITvisualChangeBox.TabIndex = 28;
+            this.ITvisualChangeBox.SelectedIndexChanged += new System.EventHandler(this.ITvisualChangeBox_SelectedIndexChanged);
             // 
             // ITvisualBox
             // 
@@ -320,6 +329,7 @@ namespace MagisterkaMB
             this.ITvisualBox.Name = "ITvisualBox";
             this.ITvisualBox.Size = new System.Drawing.Size(182, 24);
             this.ITvisualBox.TabIndex = 27;
+            this.ITvisualBox.SelectedIndexChanged += new System.EventHandler(this.ITvisualBox_SelectedIndexChanged);
             // 
             // ITmaterialBox
             // 
@@ -329,6 +339,7 @@ namespace MagisterkaMB
             this.ITmaterialBox.Name = "ITmaterialBox";
             this.ITmaterialBox.Size = new System.Drawing.Size(182, 24);
             this.ITmaterialBox.TabIndex = 30;
+            this.ITmaterialBox.SelectedIndexChanged += new System.EventHandler(this.ITmaterialBox_SelectedIndexChanged);
             // 
             // ITmaterialLabel
             // 

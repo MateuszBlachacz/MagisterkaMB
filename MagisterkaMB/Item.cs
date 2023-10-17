@@ -29,7 +29,7 @@ namespace MagisterkaMB
         public string codeName { get; set; }
         public string name { get; set; }
         public Mainflag mainflag { get; set;}
-        protected string flags = "0";
+        public string flags { get; set; }
         public string descriptionText;
         public Material material;
 
